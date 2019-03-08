@@ -1,0 +1,123 @@
+.login_background {
+ -fx-background-image: url("images/login_background.jpg");
+}
+
+.main_page {
+	 -fx-background-image: url("images/main_background.jpg");
+}
+
+.page {
+ -fx-background-image: url("images/page.jpg");
+}
+
+.page_background {
+ -fx-background-image: url("images/page_background.jpg");
+}
+
+.page_background_2 {
+ -fx-background-image: url("images/page_background_2.jpg");
+}
+
+.page_notice_background {
+ -fx-background-image: url("images/page_notice_background.jpg");
+}
+
+.page_member_background {
+ -fx-background-image: url("images/page_member_background.jpg");
+}
+
+.page_calculate_background {
+ -fx-background-image: url("images/page_calculate_background.jpg");
+}
+
+.main_button {
+-fx-padding: 5 10 5 10;   
+-fx-border-width: 2;
+-fx-border-color: #fff;
+   -fx-background-color: transparent;
+    -fx-font-size: 9pt;
+    -fx-text-fill: #d8d8d8;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.pay_button {
+-fx-padding: 5 10 5 10;   
+-fx-border-width: 2;
+-fx-border-color: #fff;
+   -fx-background-color: transparent;
+    -fx-font-size: 9pt;
+    -fx-text-fill: #d8d8d8;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.button {
+    -fx-padding: 5 10 5 10;
+    -fx-background-color: #2e3552;
+    -fx-font-size: 9pt;
+    -fx-text-fill: #d8d8d8;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.button:hover {
+     -fx-text-fill: #fff;
+     -fx-font-size: 9pt;
+     -fx-font-weight:500;
+     -fx-background-color: #2e3552;
+}
+
+.button:pressed, .button:default:hover:pressed {
+  -fx-background-color: white;
+  -fx-border-radius:0;
+  -fx-text-fill: #1d1d1d;
+}
+
+.button:focused {
+}
+
+.button:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: white;
+}
+
+.button:default {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: #ffffff;
+}
+
+.button:default:hover {
+    -fx-background-color: derive(-fx-focus-color,30%);
+}
+
+.tab-header-area {
+	-fx-tab-max-height: 50;
+}
+
+.tab-header-background {
+	-fx-background-color: #2e3552;
+}
+
+.tab {
+	-fx-background-color: #2e3552;
+	-fx-pref-height: 30;
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab > .tab-container > .tab-label {
+    -fx-alignment: CENTER;
+}
+
+.tab-label {
+	-fx-text-fill: #fff;
+	-fx-background-color: #2e3552;
+}
+
+
+.table-row-cell, .tree-table-row-cell {
+	-fx-cell-size: 25px;
+}
+
+.tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+    -fx-border-color: transparent;
+}
+
+

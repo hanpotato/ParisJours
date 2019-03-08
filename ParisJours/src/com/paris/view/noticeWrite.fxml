@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" styleClass="page_background" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.paris.controller.NoticeWriteController">
+	<children>
+		<TextField fx:id="title" layoutX="429.0" layoutY="209.0" prefHeight="27.0" prefWidth="314.0" promptText="제목을 입력하세요" />
+		<TextArea fx:id="content" layoutX="289.0" layoutY="274.0" prefHeight="278.0" prefWidth="691.0" promptText="내용을 작성하세요" />
+		<Button fx:id="writeBtn" layoutX="860.0" layoutY="569.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="120.0" text="작성">
+			<font>
+				<Font name="Malgun Gothic" size="12.0" />
+			</font>
+		</Button>
+		<ChoiceBox fx:id="cate" layoutX="289.0" layoutY="209.0" prefHeight="27.0" prefWidth="114.0">
+		</ChoiceBox>
+		<Button fx:id="noticeBtn" layoutX="15.0" layoutY="224.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="211.0" text="공지사항">
+		</Button>
+		<Button fx:id="memberBtn" layoutX="15.0" layoutY="269.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="211.0" text="회원관리">
+		</Button>
+		<Button fx:id="itemBtn" layoutX="15.0" layoutY="314.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="211.0" text="재고관리">
+		</Button>
+		<Button fx:id="payBtn" layoutX="15.0" layoutY="359.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="211.0" text="정산관리">
+		</Button>
+		<Label fx:id="notice_1" layoutX="35.0" layoutY="498.0" prefHeight="15.0" prefWidth="120.0" text="Label" textFill="WHITE" />
+		<Label fx:id="notice_2" layoutX="34.0" layoutY="523.0" prefHeight="15.0" prefWidth="120.0" text="Label" textFill="WHITE" />
+		<Label fx:id="notice_3" layoutX="34.0" layoutY="550.0" prefHeight="15.0" prefWidth="120.0" text="Label" textFill="WHITE" />
+		<Label fx:id="notice_4" layoutX="34.0" layoutY="573.0" prefHeight="15.0" prefWidth="120.0" text="Label" textFill="WHITE" />
+		<Label fx:id="notice_5" layoutX="35.0" layoutY="598.0" prefHeight="15.0" prefWidth="120.0" text="Label" textFill="WHITE" />
+		<Label layoutX="21.0" layoutY="499.0" text="·" textFill="WHITE">
+			<font>
+				<Font name="Dotum" size="12.0" />
+			</font>
+		</Label>
+		<Label layoutX="21.0" layoutY="524.0" text="·" textFill="WHITE">
+			<font>
+				<Font name="Dotum" size="12.0" />
+			</font>
+		</Label>
+		<Label layoutX="21.0" layoutY="551.0" text="·" textFill="WHITE">
+			<font>
+				<Font name="Dotum" size="12.0" />
+			</font>
+		</Label>
+		<Label layoutX="21.0" layoutY="574.0" text="·" textFill="WHITE">
+			<font>
+				<Font name="Dotum" size="12.0" />
+			</font>
+		</Label>
+		<Label layoutX="21.0" layoutY="599.0" text="·" textFill="WHITE">
+			<font>
+				<Font name="Dotum" size="12.0" />
+			</font>
+		</Label>
+		<Label fx:id="date_1" layoutX="171.0" layoutY="498.0" prefHeight="15.0" prefWidth="51.0" text="Label" textFill="#878ca4" />
+		<Label fx:id="date_2" layoutX="171.0" layoutY="523.0" prefHeight="15.0" prefWidth="51.0" text="Label" textFill="#878ca4" />
+		<Label fx:id="date_3" layoutX="171.0" layoutY="550.0" prefHeight="15.0" prefWidth="51.0" text="Label" textFill="#878ca4" />
+		<Label fx:id="date_4" layoutX="171.0" layoutY="573.0" prefHeight="15.0" prefWidth="51.0" text="Label" textFill="#878ca4" />
+		<Label fx:id="date_5" layoutX="171.0" layoutY="598.0" prefHeight="15.0" prefWidth="51.0" text="Label" textFill="#878ca4" />
+		<Label layoutX="291.0" layoutY="192.0" text="카테고리" />
+		<Label layoutX="435.0" layoutY="192.0" text="제목" />
+		<Label layoutX="290.0" layoutY="257.0" text="내용" />
+		<Button fx:id="main" layoutX="14.0" layoutY="179.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="211.0" text="메인화면">
+			<font>
+				<Font size="13.0" />
+			</font>
+		</Button>
+		<PasswordField fx:id="password" layoutX="768.0" layoutY="209.0" prefHeight="27.0" prefWidth="138.0" promptText="비밀번호 입력" />
+		<Label layoutX="773.0" layoutY="192.0" text="비밀번호" />
+      <ImageView fitHeight="52.0" fitWidth="292.0" layoutX="291.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Images/notice_write_title.png" />
+         </image>
+      </ImageView>
+	</children>
+</AnchorPane>

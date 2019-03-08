@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="365.0" prefWidth="591.0" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.paris.controller.CashController">
+	<children>
+      <Rectangle fill="#323851d1" height="304.0" layoutX="291.0" strokeType="INSIDE" strokeWidth="0.0" width="300.0" />
+		<Rectangle fill="#242a46" height="78.0" layoutX="-2.0" layoutY="287.0" strokeType="INSIDE" strokeWidth="0.0" width="593.0" />
+		<Label layoutX="33.0" layoutY="88.0" text="총 금 액" />
+		<Label layoutX="236.0" layoutY="88.0" text="원" />
+		<Label layoutX="33.0" layoutY="125.0" text="받은금액" />
+		<TextField fx:id="takeMoneyText" layoutX="90.0" layoutY="121.0" />
+		<Label layoutX="236.0" layoutY="125.0" text="원" />
+		<Separator layoutX="21.0" layoutY="157.0" prefHeight="14.0" prefWidth="242.0" />
+		<Label layoutX="33.0" layoutY="187.0" text="거스름돈" />
+		<Label layoutX="196.0" layoutY="187.0" text="원" />
+		<Button fx:id="ok" layoutX="453.0" layoutY="305.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="115.0" styleClass="pay_button" text="결제완료" />
+		<Button fx:id="cancel" layoutX="316.0" layoutY="305.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="115.0" styleClass="pay_button" text="결제취소" />
+		<Text layoutX="114.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+		<TextField fx:id="paySum" layoutX="90.0" layoutY="84.0" />
+		<Text fill="#242a46" layoutX="24.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="현금결제">
+			<font>
+				<Font name="NanumSquare ExtraBold" size="25.0" />
+			</font>
+		</Text>
+		<TextField fx:id="changeText" layoutX="90.0" layoutY="183.0" prefHeight="23.0" prefWidth="101.0" />
+		<Button fx:id="changeCalBtn" layoutX="214.0" layoutY="183.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="48.0" text="계산" />
+		<Label fx:id="mistakeLabel" layoutX="110.0" layoutY="210.0" />
+      <Text fill="WHITE" layoutX="318.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="· 멤버십(적립/사용)">
+         <font>
+            <Font name="NanumSquare ExtraBold" size="20.0" />
+         </font>
+      </Text>
+      <Label layoutX="320.0" layoutY="69.0" text="회원조회" textFill="WHITE" />
+      <TextField fx:id="phone" layoutX="319.0" layoutY="92.0" prefHeight="23.0" prefWidth="163.0" promptText="휴대폰번호(-없이)" />
+      <Label layoutX="320.0" layoutY="129.0" text="성함  |" textFill="WHITE" />
+      <Label layoutX="319.0" layoutY="159.0" text="가용 포인트  |" textFill="WHITE" />
+      <Label layoutX="319.0" layoutY="189.0" text="적립 포인트  |" textFill="WHITE" />
+      <Label layoutX="319.0" layoutY="219.0" text="포인트 할인" textFill="WHITE" />
+      <TextField fx:id="usePoint" layoutX="319.0" layoutY="241.0" prefHeight="23.0" prefWidth="163.0" promptText="사용할포인트" />
+      <Button fx:id="usePointBtn" layoutX="492.0" layoutY="241.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="할인적용" />
+      <Button fx:id="searchBtn" layoutX="491.0" layoutY="91.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="검색" />
+      <Label fx:id="name" layoutX="365.0" layoutY="129.0" textFill="WHITE" />
+      <Label fx:id="point" layoutX="400.0" layoutY="159.0" textFill="WHITE" />
+      <Label layoutX="464.0" layoutY="159.0" text="점" textFill="WHITE" />
+      <Button fx:id="pointBtn" layoutX="491.0" layoutY="184.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="적립" />
+      <Label fx:id="savePoint" layoutX="400.0" layoutY="189.0" textFill="WHITE" />
+      <Label layoutX="465.0" layoutY="189.0" text="점" textFill="WHITE" />
+      <Button fx:id="receipBtn" layoutX="153.0" layoutY="240.0" mnemonicParsing="false" text="현금영수증 발행" />
+	</children>
+</AnchorPane>

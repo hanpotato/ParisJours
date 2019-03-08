@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" styleClass="login_background" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.paris.controller.LoginController">
+	<children>
+		<TextField fx:id="mId" layoutX="722.0" layoutY="314.0" prefHeight="40.0" prefWidth="276.0" promptText="아이디를 입력하세요">
+			<font>
+				<Font name="Malgun Gothic" size="13.0" />
+			</font>
+		</TextField>
+		<PasswordField fx:id="mPw" layoutX="722.0" layoutY="365.0" prefHeight="40.0" prefWidth="276.0" promptText="비밀번호를 입력하세요">
+			<font>
+				<Font name="Malgun Gothic" size="13.0" />
+			</font>
+		</PasswordField>
+		<Pane layoutX="373.0" layoutY="399.0" prefHeight="40.0" prefWidth="40.0" styleClass="background_login_id" />
+		<Pane layoutX="373.0" layoutY="456.0" prefHeight="40.0" prefWidth="40.0" styleClass="background_login_password" />
+		<Button fx:id="loginBtn" layoutX="722.0" layoutY="428.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="276.0" styleClass="main_button" text="로그인" textFill="#555668">
+		</Button>
+      <MediaView fx:id="media" fitHeight="200.0" fitWidth="200.0" layoutX="256.0" layoutY="47.0" />
+
+	</children>
+</AnchorPane>

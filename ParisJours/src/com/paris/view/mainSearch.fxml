@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" styleClass="main_page" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.paris.controller.MainSearchController">
+	<children>
+		<Button fx:id="noticeBtn" layoutX="14.0" layoutY="179.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="211.0" text="공지사항">
+		</Button>
+		<Button fx:id="memberBtn" layoutX="14.0" layoutY="224.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="211.0" text="회원관리">
+		</Button>
+		<Button fx:id="itemBtn" layoutX="14.0" layoutY="269.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="211.0" text="재고관리">
+		</Button>
+		<Button fx:id="payBtn" layoutX="14.0" layoutY="314.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="211.0" text="정산관리">
+		</Button>
+		<ImageView fx:id="itemImage" fitHeight="200.0" fitWidth="200.0" layoutX="806.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@../../../../Images/basic.jpg" />
+			</image>
+		</ImageView>
+		<TextArea fx:id="itemContent" editable="false" focusTraversable="false" layoutX="796.0" layoutY="289.0" prefHeight="163.0" prefWidth="221.0" promptText="상품정보" text="Paris Jours" />
+		<Label fx:id="paySum" layoutX="891.0" layoutY="597.0" text="없음" textFill="#4c515e">
+			<font>
+				<Font name="Malgun Gothic Bold" size="19.0" />
+			</font>
+		</Label>
+		<Button fx:id="paymentBtn" layoutX="796.0" layoutY="632.0" mnemonicParsing="false" prefHeight="96.0" prefWidth="221.0" text="결제하기" />
+		<TableView fx:id="paylist" layoutX="240.0" layoutY="491.0" prefHeight="244.0" prefWidth="549.0">
+			<columns>
+				<TableColumn fx:id="payName" prefWidth="331.0" text="상품명" />
+				<TableColumn fx:id="payPrice" prefWidth="113.0" text="가격" />
+				<TableColumn fx:id="payAmount" prefWidth="87.0" text="수량" />
+			</columns>
+		</TableView>
+								<TableView fx:id="tableViewSearch" layoutX="240.0" layoutY="75.0" prefHeight="378.0" prefWidth="549.0" AnchorPane.bottomAnchor="315.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="235.0" AnchorPane.topAnchor="75.0">
+									<columns>
+            <TableColumn fx:id="cateSearch" resizable="false" text="카테고리" />
+										<TableColumn fx:id="nameSearch" prefWidth="215.0" text="상품명" />
+										<TableColumn fx:id="priceSearch" prefWidth="68.0" text="가격" />
+										<TableColumn fx:id="dateSearch" prefWidth="107.0" text="생산날짜" />
+										<TableColumn fx:id="amountSearch" prefWidth="78.0" text="남은수량" />
+									</columns>
+								</TableView>
+		<Button fx:id="main" layoutX="14.0" layoutY="359.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="211.0" text="로그아웃" />
+		<Label fx:id="notice_1" layoutX="35.0" layoutY="498.0" prefHeight="15.0" prefWidth="126.0" text="-----" textFill="WHITE" />
+		<Label fx:id="notice_2" layoutX="34.0" layoutY="523.0" prefHeight="15.0" prefWidth="126.0" text="-----" textFill="WHITE" />
+		<Label fx:id="notice_3" layoutX="34.0" layoutY="550.0" prefHeight="15.0" prefWidth="126.0" text="-----" textFill="WHITE" />
+		<Label fx:id="notice_4" layoutX="34.0" layoutY="573.0" prefHeight="15.0" prefWidth="126.0" text="-----" textFill="WHITE" />
+		<Label fx:id="notice_5" layoutX="35.0" layoutY="598.0" prefHeight="15.0" prefWidth="126.0" text="-----" textFill="WHITE" />
+		<Label layoutX="21.0" layoutY="499.0" text="·" textFill="WHITE">
+			<font>
+				<Font name="Dotum" size="12.0" />
+			</font>
+		</Label>
+		<Label layoutX="21.0" layoutY="524.0" text="·" textFill="WHITE">
+			<font>
+				<Font name="Dotum" size="12.0" />
+			</font>
+		</Label>
+		<Label layoutX="21.0" layoutY="551.0" text="·" textFill="WHITE">
+			<font>
+				<Font name="Dotum" size="12.0" />
+			</font>
+		</Label>
+		<Label layoutX="21.0" layoutY="574.0" text="·" textFill="WHITE">
+			<font>
+				<Font name="Dotum" size="12.0" />
+			</font>
+		</Label>
+		<Label layoutX="21.0" layoutY="599.0" text="·" textFill="WHITE">
+			<font>
+				<Font name="Dotum" size="12.0" />
+			</font>
+		</Label>
+		<Label fx:id="date_1" layoutX="171.0" layoutY="498.0" prefHeight="15.0" prefWidth="51.0" text="-----" textFill="#878ca4" />
+		<Label fx:id="date_2" layoutX="171.0" layoutY="523.0" prefHeight="15.0" prefWidth="51.0" text="-----" textFill="#878ca4" />
+		<Label fx:id="date_3" layoutX="171.0" layoutY="550.0" prefHeight="15.0" prefWidth="51.0" text="-----" textFill="#878ca4" />
+		<Label fx:id="date_4" layoutX="171.0" layoutY="573.0" prefHeight="15.0" prefWidth="51.0" text="-----" textFill="#878ca4" />
+		<Label fx:id="date_5" layoutX="171.0" layoutY="598.0" prefHeight="15.0" prefWidth="51.0" text="-----" textFill="#878ca4" />
+      <TextField fx:id="searchMain" layoutX="651.0" layoutY="45.0" promptText="상품검색" />
+      <Label layoutX="249.0" layoutY="49.0" text="상품 검색 목록" />
+      <Button fx:id="pTabReturnBtn" layoutX="718.0" layoutY="10.0" mnemonicParsing="false" text="상품 TAB" />
+      <Button fx:id="payInitBtn" layoutX="705.0" layoutY="459.0" mnemonicParsing="false" text="결제 초기화" />
+
+	</children>
+</AnchorPane>

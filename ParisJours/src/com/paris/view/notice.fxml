@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" styleClass="page_notice_background" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.paris.controller.NoticeController">
+	<children>
+		<Button fx:id="main" layoutX="14.0" layoutY="179.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="211.0" text="메인으로" />
+		<Button fx:id="noticeBtn" layoutX="14.0" layoutY="224.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="211.0" text="공지사항">
+		</Button>
+		<Button fx:id="memberBtn" layoutX="14.0" layoutY="269.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="211.0" text="회원관리">
+		</Button>
+		<Button fx:id="itemBtn" layoutX="14.0" layoutY="314.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="211.0" text="재고관리">
+		</Button>
+		<Button fx:id="payBtn" layoutX="14.0" layoutY="359.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="211.0" text="정산관리">
+		</Button>
+		<Button fx:id="writeBtn" layoutX="814.0" layoutY="594.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="192.0" styleClass="page_button" text="글 작성">
+			<font>
+				<Font size="12.0" />
+			</font>
+		</Button>
+		<TextArea fx:id="contentArea" editable="false" layoutX="814.0" layoutY="267.0" prefHeight="207.0" prefWidth="192.0" promptText="게시물 선택" />
+		<Label fx:id="titleLabel" layoutX="875.0" layoutY="188.0" prefHeight="18.0" prefWidth="125.0" text="게시물 선택" />
+		<Button fx:id="deleteBtn" layoutX="814.0" layoutY="512.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="192.0" styleClass="page_button" text="선택삭제" />
+		<Label fx:id="dateLabel" layoutX="875.0" layoutY="218.0" prefHeight="18.0" prefWidth="125.0" text="게시물 선택" />
+		<Label fx:id="notice_1" layoutX="35.0" layoutY="498.0" prefHeight="15.0" prefWidth="125.0" text="Label" textFill="WHITE" />
+		<Label fx:id="notice_2" layoutX="34.0" layoutY="523.0" prefHeight="15.0" prefWidth="125.0" text="Label" textFill="WHITE" />
+		<Label fx:id="notice_3" layoutX="34.0" layoutY="550.0" prefHeight="15.0" prefWidth="125.0" text="Label" textFill="WHITE" />
+		<Label fx:id="notice_4" layoutX="34.0" layoutY="573.0" prefHeight="15.0" prefWidth="125.0" text="Label" textFill="WHITE" />
+		<Label fx:id="notice_5" layoutX="35.0" layoutY="598.0" prefHeight="15.0" prefWidth="125.0" text="Label" textFill="WHITE" />
+		<Label layoutX="21.0" layoutY="499.0" text="·" textFill="WHITE">
+			<font>
+				<Font name="Dotum" size="12.0" />
+			</font>
+		</Label>
+		<Label layoutX="21.0" layoutY="524.0" text="·" textFill="WHITE">
+			<font>
+				<Font name="Dotum" size="12.0" />
+			</font>
+		</Label>
+		<Label layoutX="21.0" layoutY="551.0" text="·" textFill="WHITE">
+			<font>
+				<Font name="Dotum" size="12.0" />
+			</font>
+		</Label>
+		<Label layoutX="21.0" layoutY="574.0" text="·" textFill="WHITE">
+			<font>
+				<Font name="Dotum" size="12.0" />
+			</font>
+		</Label>
+		<Label layoutX="21.0" layoutY="599.0" text="·" textFill="WHITE">
+			<font>
+				<Font name="Dotum" size="12.0" />
+			</font>
+		</Label>
+		<Label fx:id="date_1" layoutX="171.0" layoutY="498.0" prefHeight="15.0" prefWidth="51.0" text="Label" textFill="#878ca4" />
+		<Label fx:id="date_2" layoutX="171.0" layoutY="523.0" prefHeight="15.0" prefWidth="51.0" text="Label" textFill="#878ca4" />
+		<Label fx:id="date_3" layoutX="171.0" layoutY="550.0" prefHeight="15.0" prefWidth="51.0" text="Label" textFill="#878ca4" />
+		<Label fx:id="date_4" layoutX="171.0" layoutY="573.0" prefHeight="15.0" prefWidth="51.0" text="Label" textFill="#878ca4" />
+		<Label fx:id="date_5" layoutX="171.0" layoutY="598.0" prefHeight="15.0" prefWidth="51.0" text="Label" textFill="#878ca4" />
+		<Button fx:id="modifyBtn" layoutX="814.0" layoutY="479.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="192.0" styleClass="page_button" text="선택수정" />
+      <TabPane fx:id="tab" layoutX="261.0" layoutY="150.0" prefHeight="498.0" prefWidth="542.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tab_all" text="전체보기">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="478.0" prefWidth="542.0">
+                     <children>
+                  		<TableView fx:id="tableview" editable="true" prefHeight="461.0" prefWidth="542.0">
+                  			<columns>
+                  				<TableColumn fx:id="cateCol" editable="false" prefWidth="74.0" sortType="DESCENDING" sortable="false" text="분류" />
+                  				<TableColumn fx:id="titleCol" editable="false" prefWidth="323.0" sortType="DESCENDING" sortable="false" text="제목" />
+                  				<TableColumn fx:id="DateCol" editable="false" prefWidth="130.0" sortType="DESCENDING" sortable="false" text="날짜" />
+                  			</columns>
+                  		</TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tab_notice" text="공지사항">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="noticeTable" editable="true" prefHeight="461.0" prefWidth="542.0">
+                           <columns>
+                              <TableColumn fx:id="cateCol1" editable="false" prefWidth="74.0" sortType="DESCENDING" sortable="false" text="분류" />
+                              <TableColumn fx:id="titleCol1" editable="false" prefWidth="324.0" sortType="DESCENDING" sortable="false" text="제목" />
+                              <TableColumn fx:id="DateCol1" editable="false" prefWidth="129.0" sortType="DESCENDING" sortable="false" text="날짜" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tab_event" text="이벤트">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="eventTable" editable="true" prefHeight="461.0" prefWidth="542.0">
+                           <columns>
+                              <TableColumn fx:id="cateCol2" editable="false" prefWidth="74.0" sortType="DESCENDING" sortable="false" text="분류" />
+                              <TableColumn fx:id="titleCol2" editable="false" prefWidth="325.0" sortType="DESCENDING" sortable="false" text="제목" />
+                              <TableColumn fx:id="DateCol2" editable="false" prefWidth="127.0" sortType="DESCENDING" sortable="false" text="날짜" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <TextField fx:id="search" cache="true" cacheHint="QUALITY" focusTraversable="false" layoutX="632.0" layoutY="111.0" prefHeight="28.0" prefWidth="171.0" promptText="제목검색">
+         <font>
+            <Font name="Malgun Gothic" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></TextField>
+      <ChoiceBox fx:id="cate" layoutX="554.0" layoutY="111.0" prefHeight="27.0" prefWidth="78.0" />
+      <ImageView fitHeight="28.0" fitWidth="139.0" layoutX="261.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Images/notice_title.png" />
+         </image>
+      </ImageView>
+	</children>
+</AnchorPane>
